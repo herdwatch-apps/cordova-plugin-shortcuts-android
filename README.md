@@ -38,7 +38,7 @@ The work that went into creating this plug-in was inspired by the existing plugi
 
 ## How to install it
 
-  cordova plugins add cordova-plugin-shortcuts-android
+  cordova plugins add https://github.com/ragcsalo/cordova-plugin-shortcuts-android
 
 ## How to use it
 
