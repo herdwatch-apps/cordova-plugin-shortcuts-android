@@ -127,6 +127,14 @@ public class ShortcutsPlugin extends CordovaPlugin {
         Intent intent = this.cordova.getActivity().getIntent();
         PluginResult result = new PluginResult(PluginResult.Status.OK, buildIntent(intent));
         callbackContext.sendPluginResult(result);
+        Bundle data = intent.getExtras();
+        if (data != null) {
+            for (String key : data.keySet()) {
+                if (key.startsWith("shortcut")) {
+                    intent.removeExtra(key);
+                }
+            }
+        }
     }
 
     private JSONObject buildIntent(
